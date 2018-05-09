@@ -1,0 +1,161 @@
+{
+    "name": "undefined",
+    "state": "running",
+    "engineVersion": "4.2.0",
+    "definitions": [
+        {
+            "id": "anonymous",
+            "state": "running",
+            "moddleContext": {
+                "rootHandler": {
+                    "element": {
+                        "$type": "bpmn:Definitions",
+                        "rootElements": [
+                            {
+                                "$type": "bpmn:Process",
+                                "id": "theProcess",
+                                "isExecutable": true,
+                                "flowElements": [
+                                    {
+                                        "$type": "bpmn:StartEvent",
+                                        "id": "theStart"
+                                    },
+                                    {
+                                        "$type": "bpmn:UserTask",
+                                        "id": "userTask"
+                                    },
+                                    {
+                                        "$type": "bpmn:EndEvent",
+                                        "id": "theEnd"
+                                    },
+                                    {
+                                        "$type": "bpmn:SequenceFlow",
+                                        "id": "flow1"
+                                    },
+                                    {
+                                        "$type": "bpmn:SequenceFlow",
+                                        "id": "flow2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "elementsById": {
+                    "theProcess": {
+                        "$type": "bpmn:Process",
+                        "id": "theProcess",
+                        "isExecutable": true,
+                        "flowElements": [
+                            {
+                                "$type": "bpmn:StartEvent",
+                                "id": "theStart"
+                            },
+                            {
+                                "$type": "bpmn:UserTask",
+                                "id": "userTask"
+                            },
+                            {
+                                "$type": "bpmn:EndEvent",
+                                "id": "theEnd"
+                            },
+                            {
+                                "$type": "bpmn:SequenceFlow",
+                                "id": "flow1"
+                            },
+                            {
+                                "$type": "bpmn:SequenceFlow",
+                                "id": "flow2"
+                            }
+                        ]
+                    },
+                    "theStart": {
+                        "$type": "bpmn:StartEvent",
+                        "id": "theStart"
+                    },
+                    "userTask": {
+                        "$type": "bpmn:UserTask",
+                        "id": "userTask"
+                    },
+                    "theEnd": {
+                        "$type": "bpmn:EndEvent",
+                        "id": "theEnd"
+                    },
+                    "flow1": {
+                        "$type": "bpmn:SequenceFlow",
+                        "id": "flow1"
+                    },
+                    "flow2": {
+                        "$type": "bpmn:SequenceFlow",
+                        "id": "flow2"
+                    }
+                },
+                "references": [
+                    {
+                        "element": {
+                            "$type": "bpmn:SequenceFlow",
+                            "id": "flow1"
+                        },
+                        "property": "bpmn:sourceRef",
+                        "id": "theStart"
+                    },
+                    {
+                        "element": {
+                            "$type": "bpmn:SequenceFlow",
+                            "id": "flow1"
+                        },
+                        "property": "bpmn:targetRef",
+                        "id": "userTask"
+                    },
+                    {
+                        "element": {
+                            "$type": "bpmn:SequenceFlow",
+                            "id": "flow2"
+                        },
+                        "property": "bpmn:sourceRef",
+                        "id": "userTask"
+                    },
+                    {
+                        "element": {
+                            "$type": "bpmn:SequenceFlow",
+                            "id": "flow2"
+                        },
+                        "property": "bpmn:targetRef",
+                        "id": "theEnd"
+                    }
+                ],
+                "warnings": []
+            },
+            "processes": {
+                "theProcess": {
+                    "id": "theProcess",
+                    "type": "bpmn:Process",
+                    "entered": true,
+                    "canceled": false,
+                    "variables": {},
+                    "services": {},
+                    "children": [
+                        {
+                            "id": "theStart",
+                            "type": "bpmn:StartEvent",
+                            "entered": false
+                        },
+                        {
+                            "id": "userTask",
+                            "type": "bpmn:UserTask",
+                            "entered": true,
+                            "canceled": false,
+                            "waiting": true
+                        },
+                        {
+                            "id": "theEnd",
+                            "type": "bpmn:EndEvent",
+                            "entered": false,
+                            "taken": false
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
