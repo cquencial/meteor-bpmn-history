@@ -65,6 +65,8 @@ history.collection = BpmnHistoryCollection
 //
 // //////////////////////////////////////////////////////////////////////////////////////
 
+history.methods = {}
+
 /**
  * Adds a history entry to the history collection by given parameters.
  * @param eventName The name of the event that occurred. see {Bpmn.Events}
